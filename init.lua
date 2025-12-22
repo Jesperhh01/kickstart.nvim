@@ -1019,3 +1019,22 @@ require('lazy').setup({
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See :help 'clipboard'
 vim.opt.clipboard = 'unnamedplus'
+
+--VIM navigation correction for norwegian keyboard
+-- Vi flytter "høyre" fra L til Ø (lillefingeren)
+vim.keymap.set('n', 'ø', 'l')
+
+-- Vi flytter "opp" fra K til L (ringfingeren)
+vim.keymap.set('n', 'l', 'k')
+
+-- Vi flytter "ned" fra J til K (langfingeren)
+vim.keymap.set('n', 'k', 'j')
+
+-- Vi flytter "venstre" fra H til J (pekefingeren)
+vim.keymap.set('n', 'j', 'h')
+
+-- Husk Visual mode og de andre modusene også:
+vim.keymap.set('v', 'ø', 'l')
+vim.keymap.set('v', 'l', 'k')
+vim.keymap.set('v', 'k', 'j')
+vim.keymap.set('v', 'j', 'h')
